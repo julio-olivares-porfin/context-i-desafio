@@ -32,14 +32,14 @@ const CardPicture = ({ photoId }) => {
     <Card className='card-picture'>
     <Card.Img variant="top" src={photo.src.tiny} alt={photo.alt} />
     <Card.Body>
-      <Card.Title>{photo.photographer}</Card.Title>
+      <Card.Title className='nombre-fotografo'>{photo.photographer}</Card.Title>
     </Card.Body>
     <ListGroup className="list-group-flush">
       <ListGroup.Item>{photo.alt}</ListGroup.Item>
-      <ListGroup.Item>{photo.width}x{photo.height}px</ListGroup.Item>
+      <ListGroup.Item className='size-photo'>{photo.width}x{photo.height}px</ListGroup.Item>
       <ListGroup.Item>
-        <Card.Link href={photo.photographer_url} target='_blank'>perfil</Card.Link>
-        <Card.Link href={photo.src.original} target='_blank'>descargar</Card.Link>
+        <Card.Link className='enlaces' href={photo.photographer_url} target='_blank'>perfil</Card.Link>
+        <Card.Link className='enlaces' href={photo.src.original} target='_blank'>descargar</Card.Link>
       </ListGroup.Item>
     </ListGroup>
     <Card.Body>
