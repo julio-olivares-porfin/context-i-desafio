@@ -11,6 +11,11 @@ const Footer = () => {
             <p>&copy; 2024 Tus Fotos Favoritas - DesafioLatam</p>
           </Col>
         </Row>
+        <Row>
+          <Col className='text-center'>
+            <a href="https://www.pexels.com">Fotos proporcionadas por Pexels</a>
+          </Col>
+        </Row>
       </Container>
     </footer>
   )
