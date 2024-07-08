@@ -4,8 +4,8 @@ import { fetchPhotoById } from '../database/pexelsAPI'
 import { ContextoFavoritos } from '../context/ContextFavoritos'
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
-import corazonSolid from '../assets/heart-solid.svg'
-import corazonOutline from '../assets/heart-regular.svg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '../assets/fontAwesome.js';
 
 const CardPicture = ({ photoId }) => {
   const [photo, setPhoto] = useState(null);
@@ -33,15 +33,18 @@ const CardPicture = ({ photoId }) => {
     <Card.Img variant="top" src={photo.src.tiny} alt={photo.alt} />
     <Card.Body>
       <Card.Title>{photo.photographer}</Card.Title>
-      <Card.Text>{photo.alt}</Card.Text>
     </Card.Body>
     <ListGroup className="list-group-flush">
-      <ListGroup.Item>{photo.width}x{photo.height}</ListGroup.Item>
-      <ListGroup.Item><Card.Link href={photo.photographer_url}>@{photo.photographer}</Card.Link></ListGroup.Item>
+      <ListGroup.Item>{photo.alt}</ListGroup.Item>
+      <ListGroup.Item>{photo.width}x{photo.height}px</ListGroup.Item>
+      <ListGroup.Item>
+        <Card.Link href={photo.photographer_url} target='_blank'>perfil</Card.Link>
+        <Card.Link href={photo.src.original} target='_blank'>descargar</Card.Link>
+      </ListGroup.Item>
     </ListGroup>
     <Card.Body>
-      <button className='favorite-btn' onClick={() => toggleFavorite(photo)}>
-        <img src={isFavorite ? corazonSolid : corazonOutline} />
+      <button className='botonfavorito' onClick={() => toggleFavorite(photo)}>
+        <FontAwesomeIcon icon={isFavorite ? ['fas','heart'] : ['far', 'heart']} />
       </button>
     </Card.Body>
     </Card>
