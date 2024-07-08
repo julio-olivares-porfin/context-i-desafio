@@ -6,6 +6,7 @@ import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../assets/fontAwesome.js';
+import Spinner from 'react-bootstrap/Spinner';
 
 const CardPicture = ({ photoId }) => {
   const [photo, setPhoto] = useState(null);
@@ -24,7 +25,7 @@ const CardPicture = ({ photoId }) => {
     getPhoto();
   }, [photoId]);
 
-  if (!photo) return <div>Loading...</div>;
+  if (!photo) return <div> <Spinner animation="grow" role="status"><span className="visually-hidden">Cargando...</span></Spinner></div>;
 
   const isFavorite = favorites.some(fav => fav.id === photo.id);
 
@@ -35,7 +36,7 @@ const CardPicture = ({ photoId }) => {
       <Card.Title className='nombre-fotografo'>{photo.photographer}</Card.Title>
     </Card.Body>
     <ListGroup className="list-group-flush">
-      <ListGroup.Item>{photo.alt}</ListGroup.Item>
+      <ListGroup.Item className='descripcion-foto'>{photo.alt}</ListGroup.Item>
       <ListGroup.Item className='size-photo'>{photo.width}x{photo.height}px</ListGroup.Item>
       <ListGroup.Item>
         <Card.Link className='enlaces' href={photo.photographer_url} target='_blank'>perfil</Card.Link>

@@ -1,4 +1,4 @@
-import Navbar from './components/Navbar'
+import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import Home from './layouts/Home'
 import Favorites from './layouts/Favoritos'
@@ -8,14 +8,14 @@ import { FavoritosProvider } from './context/ContextFavoritos'
 function App () {
   return (
     <FavoritosProvider>
-      <Navbar />
+      <Navigation />
       <Routes>
         <Route
           path='/'
           element={<Home />}
         />
         <Route
-          path='/favorites'
+          path='/favoritos'
           element={<Favorites />}
         />
       </Routes>

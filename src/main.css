@@ -1,9 +1,3 @@
-.home {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
 .card-picture {
   width: 18rem;
 }
@@ -19,5 +13,55 @@
   border: none;
   cursor: pointer;
   font-size: 24px;
-  color: #E07A5F;
+  color: #ae0000;
+}
+
+.botonfavorito:hover {
+  color: #542929;
+}
+
+
+.homesection {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.favoritossection {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.color-brandicon {
+  color: #ae0000;
+}
+
+.size-photo {
+  font-size: small;
+  color: #808080;
+}
+
+.enlaces {
+  text-decoration: none;
+  font-size: small;
+  color: #808080;
+}
+
+.descripcion-foto {
+  font-size: small;
+  color: #808080;
 }
