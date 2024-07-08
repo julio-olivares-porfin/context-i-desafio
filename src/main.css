@@ -46,6 +46,13 @@
   margin-bottom: 50px;
 }
 
+.favoritos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
 .color-brandicon {
   color: #ae0000;
 }

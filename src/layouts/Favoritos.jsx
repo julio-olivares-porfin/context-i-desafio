@@ -9,17 +9,17 @@ const Favorites = () => {
   const { favorites } = useContext(ContextoFavoritos)
 
   return (
-  <section className='favoritossection'>
-    <Container fluid>
-      <Row>
-        <Col>
-          <div className='favoritos'>
-            {favorites.map(photo => ( <CardPicture key={photo.id} photoId={photo.id} />))}
-          </div>
-        </Col>
-      </Row>
-    </Container>
-  </section>
+    <section className='favoritossection'>
+      <Container fluid>
+        <Row>
+          <Col>
+            <div className='favoritos'>
+              {favorites.map(photo => ( <CardPicture key={photo.id} photoId={photo.id} />))}
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </section>
   )
 }
 
