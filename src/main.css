@@ -1,0 +1,15 @@
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.card-picture {
+  width: 18rem;
+}
+
+.favoritos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
